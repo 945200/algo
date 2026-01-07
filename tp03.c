@@ -13,13 +13,9 @@ typedef struct Node {
     struct Node *next;
 } Node;
 
-Node* createEmptyList() {
-    return NULL;
-}
+Node* createEmptyList() { return NULL; }
 
-int isEmpty(Node* tail) {
-    return (tail == NULL);
-}
+int isEmpty(Node* tail) { return (tail == NULL); }
 
 Node* createNode(Product p) {
     Node* newNode = (Node*)malloc(sizeof(Node));
@@ -53,7 +49,7 @@ Node* insertAtEnd(Node* tail, Product p) {
 
 void displayProducts(Node* tail) {
     if (tail == NULL) {
-        printf("القائمة فارغة.\n");
+        printf("list is empty.\n");
         return;
     }
     Node* head = tail->next;
@@ -65,35 +61,21 @@ void displayProducts(Node* tail) {
     } while (p != head);
 }
 
-Product readProduct() {
-    Product p;
-    printf("أدخل ID: ");
-    scanf("%d", &p.ID);
-    getchar();
-    printf("أدخل Name: ");
-    fgets(p.Name, sizeof(p.Name), stdin);
-    size_t len = strlen(p.Name);
-    if (p.Name[len - 1] == '\n') p.Name[len - 1] = '\0';
-    printf("أدخل Price: ");
-    scanf("%d", &p.Price);
-    return p;
-}
-
 int main() {
     Node* tail = createEmptyList();
 
-    Product p3 = {3, "Keyboard", 25};
-    tail = insertAtend(tail, p3);
+    Product p1 = {1, "Keyboard", 25};
+    tail = insertAtEnd(tail, p1);
 
     Product p2 = {2, "Mouse", 15};
-    tail = insertAtbeginning(tail, p2);
+    tail = insertAtBeginning(tail, p2);
 
-    Product p4 = {4, "Monitor", 120};
-    tail = insertAtbeginning(tail, p4);
-    
-    Product p1 = {1, "printer", 190};
-    tail = insertAtend(tail, p1);
-    
+    Product p3 = {3, "Monitor", 120};
+    tail = insertAtEnd(tail, p3);
+
+    Product p4 = {4, "printer", 120};
+    tail = insertAtBeginning(tail, p4);
+
     displayProducts(tail);
 
     return 0;
