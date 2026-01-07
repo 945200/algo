@@ -82,15 +82,18 @@ Product readProduct() {
 int main() {
     Node* tail = createEmptyList();
 
-    Product p1 = {1, "Keyboard", 25};
-    tail = insertAtBeginning(tail, p1);
+    Product p3 = {3, "Keyboard", 25};
+    tail = insertAtend(tail, p3);
 
     Product p2 = {2, "Mouse", 15};
-    tail = insertAtEnd(tail, p2);
+    tail = insertAtbeginning(tail, p2);
 
-    Product p3 = {3, "Monitor", 120};
-    tail = insertAtBeginning(tail, p3);
-
+    Product p1 = {1, "Monitor", 120};
+    tail = insertAtend(tail, p1);
+    
+    Product p1 = {1, "printer", 190};
+    tail = insertAtbeginning(tail, p1);
+    
     displayProducts(tail);
 
     return 0;
