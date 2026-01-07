@@ -88,8 +88,8 @@ int main() {
     Product p2 = {2, "Mouse", 15};
     tail = insertAtbeginning(tail, p2);
 
-    Product p1 = {1, "Monitor", 120};
-    tail = insertAtend(tail, p1);
+    Product p4 = {4, "Monitor", 120};
+    tail = insertAtend(tail, p4);
     
     Product p1 = {1, "printer", 190};
     tail = insertAtbeginning(tail, p1);
