@@ -89,10 +89,10 @@ int main() {
     tail = insertAtbeginning(tail, p2);
 
     Product p4 = {4, "Monitor", 120};
-    tail = insertAtend(tail, p4);
+    tail = insertAtbeginning(tail, p4);
     
     Product p1 = {1, "printer", 190};
-    tail = insertAtbeginning(tail, p1);
+    tail = insertAtend(tail, p1);
     
     displayProducts(tail);
 
